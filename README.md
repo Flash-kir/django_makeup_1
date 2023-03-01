@@ -1,6 +1,6 @@
 # django_makeup_1
 
-Программа выводит (плеер)[https://github.com/devmanorg/video-player-jslib] и позволяет просмотреть тестовое видео.
+Программа выводит [плеер](https://github.com/devmanorg/video-player-jslib) и позволяет просмотреть тестовое видео.
 
 ## Установка и запуск
 
