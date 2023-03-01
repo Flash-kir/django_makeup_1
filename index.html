@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Пример подключения плеера</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <style type="text/css">
+    .buttons-panel {
+      background-color: black;
+      display: flex;
+      flex-direction: row;  
+      align-items: flex-start;
+    }
+    .video-container {
+      flex: min-content;
+    }
+    .player-panel {
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      width: 800px;
+      height: 600px;
+      display: flex;
+      flex-direction: column;  
+    }
+    .fullscreen-button {
+      text-align: end;
+      flex: min-content;
+    }
+    button {
+      margin: 5px;
+      padding: 10px;
+      border-style: none;
+      cursor: pointer;
+      color: white;
+      background-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="player-panel" id="player">
+
+    <div class="js-video-container video-container"></div>
+
+    <div class="buttons-panel">
+      <button class="js-play-button"><i class="fa fa-play fa-2x"></i></button>
+      <button class="js-pause-button"><i class="fa fa-pause fa-2x"></i></button>
+      <button class="js-mute-button"><i class="fa fa-volume-up fa-2x"></i></button>
+      <button class="js-volume-button"><i class="fa fa-volume-off fa-2x"></i></button>
+      <button class="js-fullscreen-button fullscreen-button"><i class="fa fa-expand fa-2x"></i></button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
+  <script src="player.js"></script>
+
+<script type="text/javascript">
+    createPlayer({
+      elementId: 'player',
+  });
+  </script>
+
+</body>
+</html>
