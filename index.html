@@ -57,9 +57,26 @@
     .js-progress {
       flex-grow: 99;
       background-color: grey;
+      height: 5px;
+      margin: 7px 10px;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: row;
     }
     .js-progress-slider {
       background-color: #f8104d;
+      height: 5px;
+      border-radius: 3px;
+    }
+    .dot {
+      height: 8px;
+      width: 8px;
+      background-color: #f8104d;
+      border-radius: 50%;
+      display: inline-block;
+      border: solid 3px;
+      border-color: white;
+      margin: -4px -7px 0px;
     }
   </style>
 </head>
@@ -78,7 +95,8 @@
       <div class="progress-panel">
         <span class="js-current-time"></span>
         <div class="js-progress">
-          <div class="js-progress-slider">Прогресс</div>
+          <div class="js-progress-slider"></div>
+          <div class="dot"></div>
         </div>
           <span class="js-duration"></span>
       </div>
