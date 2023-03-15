@@ -9,7 +9,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
   <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <style type="text/css">
     .buttons-panel {
@@ -30,7 +32,13 @@
       margin: -2px;  
     }
     .progress-panel {
+      color: white;
+      display: flex;
+      flex-direction: row;  
+      align-items: flex-start;
       flex-grow: 99;
+      font-family: 'Roboto', sans-serif;
+      margin-top: 13px;
     }
     .player-button {
       font-size: 1.3em;
@@ -41,8 +49,17 @@
       color: white;
       background-color: transparent;
     }
-    .js-mute-button, .js-pause-button {
+    .js-mute-button {
       margin-left: -4px;
+    }
+    .js-current-time, .js-duration {
+    }
+    .js-progress {
+      flex-grow: 99;
+      background-color: grey;
+    }
+    .js-progress-slider {
+      background-color: #f8104d;
     }
   </style>
 </head>
@@ -54,12 +71,16 @@
     <div class="buttons-panel">
       <div>
         <button class="js-play-button player-button"><i class="fa fa-play"></i></button>
-        <button class="js-pause-button player-button"><i class="fa fa-pause"></i></button>
+        <button class="js-pause-button player-button hidden"><i class="fa fa-pause"></i></button>
         <button class="js-mute-button player-button"><i class="fa fa-volume-up"></i></button>
         <button class="js-volume-button player-button"><i class="fa fa-volume-off"></i></button>
       </div>
       <div class="progress-panel">
-  
+        <span class="js-current-time"></span>
+        <div class="js-progress">
+          <div class="js-progress-slider">Прогресс</div>
+        </div>
+          <span class="js-duration"></span>
       </div>
       <div>
         <button class="js-fullscreen-button player-button"><i class="fa fa-expand"></i></button>
