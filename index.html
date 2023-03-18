@@ -4,6 +4,7 @@
   <title>Пример подключения плеера</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/player.css">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -13,78 +14,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">  <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <style>
-    .buttons-panel {
-      background-color: black;
-      display: flex;
-      flex-direction: row;  
-      align-items: flex-start;
-    }
-    .video-container {
-      flex: min-content;
-    }
-    .player-panel {
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      width: 800px;
-      height: 600px;
-      display: flex;
-      flex-direction: column;
-      margin: -2px;  
-    }
-    .progress-panel {
-      color: white;
-      display: flex;
-      flex-direction: row;  
-      align-items: flex-start;
-      flex-grow: 99;
-      font-family: 'Roboto', sans-serif;
-      margin-top: 13px;
-    }
-    .player-button {
-      font-size: 1.3em;
-      width: 37px;
-      height: 44px;
-      border-style: none;
-      cursor: pointer;
-      color: white;
-      background-color: transparent;
-    }
-    .js-mute-button, .js-volume-button {
-      margin-left: -4px;
-    }
-    .js-current-time, .js-duration {
-    }
-    .js-progress {
-      flex-grow: 99;
-      background-color: grey;
-      height: 5px;
-      margin: 7px 10px;
-      border-radius: 3px;
-      display: flex;
-      flex-direction: row;
-    }
-    .js-progress-slider {
-      background-color: #f8104d;
-      height: 5px;
-      border-radius: 3px;
-    }
-    .dot {
-      transition-property: opacity;
-      transition-duration: 500ms;
-      opacity: 0;
-      height: 8px;
-      width: 8px;
-      background-color: #f8104d;
-      border-radius: 50%;
-      display: inline-block;
-      border: solid 3px;
-      border-color: white;
-      margin: -4px -7px 0px;
-    }
-    .js-progress:hover .dot {
-      opacity: 1;
-    }
-  </style>
 </head>
 <body>
   <div class="player-panel" id="player">
@@ -109,7 +38,7 @@
       <div>
         <button class="js-fullscreen-button player-button"><i class="fa fa-expand"></i></button>
       </div>
-      </div>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

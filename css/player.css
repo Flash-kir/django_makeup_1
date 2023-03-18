@@ -1,0 +1,69 @@
+.buttons-panel {
+    background-color: black;
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    font-size: 16px;
+}
+.video-container {
+    flex: min-content;
+}
+.player-panel {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: -2px;  
+}
+.progress-panel {
+    color: white;
+    display: flex;
+    flex-direction: row;  
+    align-items: center;
+    flex-grow: 99;
+    font-family: 'Roboto', sans-serif;
+}
+.player-button {
+    font-size: 20px;
+    width: 37px;
+    height: 44px;
+    border-style: none;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+}
+.js-mute-button, .js-volume-button {
+    margin-left: -4px;
+}
+.js-progress {
+    cursor: pointer;
+    flex-grow: 99;
+    background-color: grey;
+    height: 5px;
+    margin: 7px 10px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+}
+.js-progress-slider {
+    background-color: #f8104d;
+    height: 5px;
+    border-radius: 3px;
+}
+.dot {
+    transition-property: opacity;
+    transition-duration: 500ms;
+    opacity: 0;
+    height: 8px;
+    width: 8px;
+    background-color: #f8104d;
+    border-radius: 50%;
+    display: inline-block;
+    border: solid 3px;
+    border-color: white;
+    margin: -4px -7px 0px;
+}
+.js-progress:hover .dot {
+    opacity: 1;
+}
